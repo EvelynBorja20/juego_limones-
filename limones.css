@@ -141,3 +141,23 @@ canvas {
   transform: scale(0.95);
   box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
 }
+/* IMAGEN SUPERIOR */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  animation: flotar 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6));
+}
+
+/* ANIMACIÓN FLOTANTE */
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}

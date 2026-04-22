@@ -1,7 +1,7 @@
 let canvas=document.getElementById("areaJuego");
 let ctx=canvas.getContext("2d");
 
-const ALTURA_SUELO=20;
+const ALTURA_SUELO=10;
 const ALTURA_PERSONAJE=60;
 const ANCHO_PERSONAJE=40;
 const ANCHO_LIMON=20;
@@ -15,7 +15,7 @@ let limonY=0;
 
 let puntaje=0;
 let vidas=3;
-let velocidadCaida=200;
+let velocidadCaida=100;
 let intervalo;
 
 function iniciar(){
@@ -23,7 +23,7 @@ function iniciar(){
 }
 
 function reiniciarJuego(){
-    personajeX=canvas.width/2;
+    personajeX=canvas.width-ANCHO_PERSONAJE;
     limonY=0;
     puntaje=0;
     vidas=3;

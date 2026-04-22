@@ -1,27 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>Atrapar Limones</title>
   <link rel="stylesheet" href="limones.css"/>
-   <script src="utilis.js"></script>
- 
+  <script src="utilis.js"></script>
 </head>
+
 <body onload="iniciar();">
+
   <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ..... </p>
-    <h2>Autor: Evelyn Borja</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas<span id="txtVidas">3</span></p>
-    </div>
-    <div class="botones">
-      <button onclick="moverIzquierda();">Izquierda</button>
-      <button onclick="moverDerecha();">Derecha</button>
-      <button>Reiniciar</button>
-    </div>
+    
+    <header>
+      <h1>🍋 Atrapar Limones</h1>
+      <p class="frase">"Si del cielo te caen limones... ¡atrápalos!"</p>
+      <h2>Autor: Evelyn Borja</h2>
+    </header>
+
+    <main>
+      <canvas id="areaJuego" width="600" height="400"></canvas>
+
+      <div class="panel">
+        <div class="card">
+          <span>Puntaje</span>
+          <strong id="txtPuntaje">0</strong>
+        </div>
+
+        <div class="card">
+          <span>Vidas</span>
+          <strong id="txtVidas">3</strong>
+        </div>
+      </div>
+
+      <div class="botones">
+  <button onclick="moverIzquierda();">
+    <span class="icono">⬅</span> Izquierda
+  </button>
+
+  <button onclick="moverDerecha();">
+    <span class="icono">➡</span> Derecha
+  </button>
+
+  <button onclick="reiniciarJuego();">
+    <span class="icono">🔄</span> Reiniciar
+  </button>
+</div>
+    </main>
+
   </div>
+
   <script src="limones.js"></script>
 </body>
 </html>

@@ -125,3 +125,6 @@ function mostrarGameOver(){
     ctx.font="30px Arial";
     ctx.fillText("GAME OVER", canvas.width/2-100, canvas.height/2);
 }
+ function saludo (){
+    alert("Saludo");
+}

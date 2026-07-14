@@ -2,7 +2,7 @@ let canvas=document.getElementById("areaJuego");
 let ctx=canvas.getContext("2d");
 
 const ALTURA_SUELO=10;
-const ALTURA_PERSONAJE=60;
+const ALTURA_PERSONAJE=100;
 const ANCHO_PERSONAJE=40;
 const ANCHO_LIMON=20;
 const ALTURA_LIMON=20;
@@ -50,7 +50,7 @@ function dibujarSuelo(){
 }
 
 function dibujarPersonaje(){
-    ctx.fillStyle="yellow";
+    ctx.fillStyle="pink";
     ctx.fillRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
 
@@ -123,8 +123,12 @@ function actualizarPanel(){
 function mostrarGameOver(){
     ctx.fillStyle="red";
     ctx.font="30px Arial";
-    ctx.fillText("GAME OVER", canvas.width/2-100, canvas.height/2);
+    ctx.fillText("Perdiste ", canvas.width/2-100, canvas.height/2);
 }
  function saludo (){
     alert("Saludo");
+}
+
+function desaparecerPersonaje(){
+    ctx.clearRect(x,y,ANCHO_PERSONAJE,ALTURA_PERSONAJE)
 }

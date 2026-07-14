@@ -130,5 +130,5 @@ function mostrarGameOver(){
 }
 
 function desaparecerPersonaje(){
-    ctx.clearRect(x,y,ANCHO_PERSONAJE,ALTURA_PERSONAJE)
+    ctx.clearRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE)
 }
